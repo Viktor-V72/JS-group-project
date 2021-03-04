@@ -26,17 +26,27 @@
     @media (min-width: $mobile) and (max-width: $tablet - 1) {
       @content;
     }
+  } @else if $range == till-tablet {
+      @media (max-width: $tablet - 1) {
+        @content;
+    }
   } @else if $range == tablet {
     @media (min-width: $tablet) and (max-width: $desktop - 1) {
       @content;
     }
-  } @else if $range == mobile-plus {
-    @media (min-width: 0px) and (max-width: $desktop - 1) {
+  } @else if $range == tablet-plus {
+    @media (min-width: 768px) {
       @content;
     }
   } @else if $range == desktop {
     @media (min-width: $desktop) {
       @content;
     }
-  }
+  } @else if $range == 2x {
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        @content;
+    }
+}
 }

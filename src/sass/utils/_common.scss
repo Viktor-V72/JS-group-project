@@ -23,7 +23,10 @@
 }
 
 .flexbox {
-  @include container(flex, center, center);
+  @include for-size (tablet-plus) {
+    @include container(flex, center, center);
+    flex-wrap: wrap;
+  }
 }
 
 body {
@@ -60,4 +63,15 @@ img {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  border: 0;
+  padding: 0;
 }

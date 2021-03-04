@@ -8,7 +8,124 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<header>
+  <div class="container header">
+    <!-- NAVIGATION -->
+    <nav class="navigation">
+      <a class="navigation__logo" href="./index.html">
+        <svg  class="navigation__logo-svg" width="24" height="24" style="display: inline-block;">
+          <use
+            href="./images/sprite.svg#icon-film"
+          ></use>
+        </svg>
+        <span class="navigation__logo-name">Filmoteka</span>
+      </a> 
+    <ul class="navigation__list">
+      <li class="navigation__list-item"><a class="link navigation__link is-active" href="./index.html">Home</a></li>
+      <li class="navigation__list-item"><a class="link navigation__link" href="./">My library</a></li>
+    </ul>
+    
+  </nav>
+  <!-- SEARCH INPUT -->
+    <input type="text" id="search" placeholder="Поиск фильмов">
+    <ul class="header__buttons">
+  <!-- BUTTONS WATCHED & QUEUE -->
+      <button class="bnt" type="button">Watched</button>
+      <button class="bnt" type="button">Queue</button>
+    </ul>
+  </div>
   
+</header>
+<!-- MAIN CONTENT -->
+<main>
+  <section class="films">
+    <div class="container">
+      <h1 class="visually-hidden">Film gallery</h1>
+      <ul class="gallery flexbox">
+        <li class="gallery-item">
+          <div class="gallery-item__card">
+            <img class="gallery-item__image" src="./images/desktop/GREYHOUND.jpg" alt="Постер к фильму">
+            <h2 class="gallery-item__title">Film Name</h2>
+            <p class="gallery-item__text">genre | year <span class="gallery-item__rate">Rate</span></p> 
+            
+          </div>
+        </li>
+
+        <li class="gallery-item">
+          <div class="gallery-item__card">
+            <img class="gallery-item__image" src="./images/desktop/GREYHOUND.jpg" alt="Постер к фильму">
+            <h2 class="gallery-item__title">Film Name</h2>
+            <p class="gallery-item__text">genre | year <span class="gallery-item__rate">Rate</span></p> 
+            
+          </div>
+        </li>
+
+        <li class="gallery-item">
+          <div class="gallery-item__card">
+            <img class="gallery-item__image" src="./images/desktop/GREYHOUND.jpg" alt="Постер к фильму">
+            <h2 class="gallery-item__title">Film Name</h2>
+            <p class="gallery-item__text">genre | year <span class="gallery-item__rate">Rate</span></p> 
+            
+          </div>
+        </li>
+
+        <li class="gallery-item">
+          <div class="gallery-item__card">
+            <img class="gallery-item__image" src="./images/desktop/GREYHOUND.jpg" alt="Постер к фильму">
+            <h2 class="gallery-item__title">Film Name</h2>
+            <p class="gallery-item__text">genre | year <span class="gallery-item__rate">Rate</span></p> 
+            
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="js-pagination">
+    </div>
+    
+  </section>
+</main>  
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+  <p class="footer__text">©  2020 | All Rights Reserved | 
+    Developed with   
+    <svg width="14" height="12">
+      <use href="./images/sprite.svg#icon-heart"></use>
+    </svg> by GoIT Students
+  </p>
+</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal container">
+  <svg width="14" height="14">
+    <use href="./images/sprite.svg#icon-close"></use>
+  </svg>
+  <img class="modal__image" src="./images/mobile/HOLLYWOOD.jpg" alt="">
+  <div class="modal__text">
+    <h2 class="modal__film-title">Film name</h2>
+    <p class="modal__film-info">Vote / Votes <span class="modal__film-info--value">Rate/Votes</span> </p>
+    <p class="modal__film-info">Popularity <span class="modal__film-info--value">Number</span></p>
+    <p class="modal__film-info">Original Title <span class="modal__film-info--value">Title</span></p>
+    <p class="modal__film-info">Genre <span class="modal__film-info--value">Genre</span></p>
+
+    <h3 class="modal__film-about">About</h3>
+    <p class="modal__film-description">Four of the West’s most infamous outlaws assemble to 
+      steal a huge stash of gold from the most corrupt settlement 
+      of the gold rush towns. But not all goes to plan one is killed 
+      and the other three escapes with bags of gold hide out in the 
+      abandoned gold mine where they happen across another gang of three – 
+      who themselves were planning to hit the very same bank! As tensions 
+      rise, things go from bad to worse as they realise the bags of gold 
+      are filled with lead... they’ve been double crossed – but by 
+      who and how?</p>
+      <ul class="list">
+        <li class="modal__action-button"><button type="button">add to Watched</button></li>
+        <li class="modal__action-button"><button type="button">add to queue</button></li>
+      </ul>
+            
+  </div>
+</div>
 </body>
 </html>

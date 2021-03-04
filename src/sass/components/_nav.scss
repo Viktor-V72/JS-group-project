@@ -1,0 +1,29 @@
+.navigation {
+    display: flex;
+    flex-grow: 1;
+}
+
+.navigation__logo {
+    margin-right: auto;
+}
+
+.navigation__list {
+    display: flex;
+}
+
+.navigation__list-item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.navigation__logo-name {
+    @include for-size (till-tablet) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        margin: -1px;
+        border: 0;
+        padding: 0;
+    }
+}

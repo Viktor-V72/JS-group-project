@@ -1,0 +1,34 @@
+.header {
+    height: 230px;
+    @include for-size (till-tablet){
+        background-image: linear-gradient(to right, $color-background, $color-background),
+                url(../images/mobile/header.jpg);
+  
+        @include for-size (2x) {
+          background-image: linear-gradient(to right, $color-background,$color-background),
+                  url(../images/mobile/header@2x.jpg);
+        }
+    }
+  
+    @include for-size (tablet) {
+      background-size: cover;
+      background-image: linear-gradient(to right, $color-background, $color-background),
+                  url(../images/tablet/header.jpg);
+  
+        @include for-size (2x) {
+          background-image: linear-gradient(to right, $color-background, $color-background),
+                  url(../images/tablet/header@2x.jpg);
+        }        
+    }
+  
+    @include for-size (desktop) {
+      background-image: linear-gradient(to right, $color-background, $color-background),
+                  url(../images/desktop/header.jpg);
+  
+        @include for-size (2x) {
+          background-image: linear-gradient(to right, $color-background, $color-background),
+                  url(../images/desktop/header@2x.jpg);
+                  }   
+    }
+    
+}
